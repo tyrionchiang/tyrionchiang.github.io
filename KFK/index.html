@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section id="app"></section>
+    
+    <script>
+        const app = document.getElementById("app");
+        for (let index = 1; index < 42; index++) {
+            app.innerHTML += (`
+            <p id="p${index}"><label>Page ${index}</label></p>
+            
+            <img class="image" src="img/${ index/10 < 1 ? '0'+index : index }.jpg" alt="${index}" />
+            `);
+        }
+    </script>
+</body>
+</html>
